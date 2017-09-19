@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <log>
+    <OperTime>2016/5/31 20:48:51</OperTime>
+    <Info>wx20160531204954f7ea1a895b0027537401</Info>
+    <param>&lt;xml&gt;
+&lt;appid&gt;&lt;![CDATA[wx30ca486377b6ca8d]]&gt;&lt;/appid&gt;
+&lt;body&gt;&lt;![CDATA[贴贴。活动编号：A160531204719607]]&gt;&lt;/body&gt;
+&lt;mch_id&gt;1229356602&lt;/mch_id&gt;
+&lt;nonce_str&gt;2760824&lt;/nonce_str&gt;
+&lt;notify_url&gt;&lt;![CDATA[http://xlfj521.vicp.net/pay/wx_Pay.aspx]]&gt;&lt;/notify_url&gt;
+&lt;openid&gt;&lt;![CDATA[ooxNMtzZgNELfVtXX-jQUGmD-w0k]]&gt;&lt;/openid&gt;
+&lt;out_trade_no&gt;&lt;![CDATA[B160531204844275]]&gt;&lt;/out_trade_no&gt;
+&lt;sign&gt;&lt;![CDATA[AF94D56EE9C4A37A03F249B5F782C12B]]&gt;&lt;/sign&gt;
+&lt;spbill_create_ip&gt;&lt;![CDATA[127.0.0.1]]&gt;&lt;/spbill_create_ip&gt;
+&lt;total_fee&gt;100&lt;/total_fee&gt;
+&lt;trade_type&gt;&lt;![CDATA[JSAPI]]&gt;&lt;/trade_type&gt;
+&lt;/xml&gt;
+</param>
+    <query>appid=wx30ca486377b6ca8d&amp;body=贴贴。活动编号：A160531204719607&amp;mch_id=1229356602&amp;nonce_str=2760824&amp;notify_url=http://xlfj521.vicp.net/pay/wx_Pay.aspx&amp;openid=ooxNMtzZgNELfVtXX-jQUGmD-w0k&amp;out_trade_no=B160531204844275&amp;sign=AF94D56EE9C4A37A03F249B5F782C12B&amp;spbill_create_ip=127.0.0.1&amp;total_fee=100&amp;trade_type=JSAPI</query>
+  </log>
+</DocumentElement>

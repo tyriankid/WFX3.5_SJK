@@ -1,0 +1,14 @@
+{"type":"event","receiver_id":1425698254,"sender_id":1732447702,"created_at":"Wed Apr 13 23:34:36  0800 2016","text":"关注事件消息","data":{"subtype":"follow"}}
+2016/4/13 23:34:25-1
+
+2016/4/13 23:34:25-2
+文件“D:\wwwroot\demo.xkd.kuaidiantong.cn\API\wberror.txt”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append)
+   在 System.IO.File.AppendText(String path)
+   在 Hidistro.UI.Web.API.wb.ProcessRequest(HttpContext context)
+2016/4/13 23:34:25-3

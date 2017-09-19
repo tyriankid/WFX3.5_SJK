@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{EB0A32A6-FADD-4B43-9BC3-28EC243EDDDD}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Hidistro.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\dll\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\dll\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hidistro.Core.Configuration\AppLocation.cs" />
+    <Compile Include="Hidistro.Core.Configuration\HiApplication.cs" />
+    <Compile Include="Hidistro.Core.Configuration\HiConfiguration.cs" />
+    <Compile Include="Hidistro.Core.Configuration\Provider.cs" />
+    <Compile Include="Hidistro.Core.Configuration\RolesConfiguration.cs" />
+    <Compile Include="Hidistro.Core.Entities\CustomerServiceSettings.cs" />
+    <Compile Include="Hidistro.Core.Entities\DbQueryResult.cs" />
+    <Compile Include="Hidistro.Core.Entities\Pagination.cs" />
+    <Compile Include="Hidistro.Core.Entities\SiteSettings.cs" />
+    <Compile Include="Hidistro.Core.Enums\ApplicationType.cs" />
+    <Compile Include="Hidistro.Core.Enums\DataProviderAction.cs" />
+    <Compile Include="Hidistro.Core.Enums\DiscountStatus.cs" />
+    <Compile Include="Hidistro.Core.Enums\DistributorGrade.cs" />
+    <Compile Include="Hidistro.Core.Enums\DistributorStatus.cs" />
+    <Compile Include="Hidistro.Core.Enums\FileClass.cs" />
+    <Compile Include="Hidistro.Core.Enums\FreeShippingConditionType.cs" />
+    <Compile Include="Hidistro.Core.Enums\MeasureUnit.cs" />
+    <Compile Include="Hidistro.Core.Enums\MessageAdminUserType.cs" />
+    <Compile Include="Hidistro.Core.Enums\ShippingType.cs" />
+    <Compile Include="Hidistro.Core.Enums\SortAction.cs" />
+    <Compile Include="Hidistro.Core.Enums\SSLSettings.cs" />
+    <Compile Include="Hidistro.Core.Exceptions\HiException.cs" />
+    <Compile Include="Hidistro.Core.Urls\ApplicationKeyMapping.cs" />
+    <Compile Include="Hidistro.Core.Urls\HiUrlReWriter.cs" />
+    <Compile Include="Hidistro.Core.Urls\Location.cs" />
+    <Compile Include="Hidistro.Core.Urls\LocationSet.cs" />
+    <Compile Include="Hidistro.Core.Urls\ReWrittenUrl.cs" />
+    <Compile Include="Hidistro.Core.Urls\SiteUrls.cs" />
+    <Compile Include="Hidistro.Core.Urls\SiteUrlsData.cs" />
+    <Compile Include="Hidistro.Core.Urls\UrlReWriteProvider.cs" />
+    <Compile Include="Hidistro.Core\CopyrightLicenser.cs" />
+    <Compile Include="Hidistro.Core\CustomerServiceManager.cs" />
+    <Compile Include="Hidistro.Core\DataHelper.cs" />
+    <Compile Include="Hidistro.Core\DataProviders.cs" />
+    <Compile Include="Hidistro.Core\DesSecurity.cs" />
+    <Compile Include="Hidistro.Core\Express.cs" />
+    <Compile Include="Hidistro.Core\ExpressTrackingSetService.cs" />
+    <Compile Include="Hidistro.Core\Globals.cs" />
+    <Compile Include="Hidistro.Core\HiCache.cs" />
+    <Compile Include="Hidistro.Core\HiCryptographer.cs" />
+    <Compile Include="Hidistro.Core\HtmlCodingAttribute.cs" />
+    <Compile Include="Hidistro.Core\LicenseChecker.cs" />
+    <Compile Include="Hidistro.Core\LicenseHelper.cs" />
+    <Compile Include="Hidistro.Core\ProductShowOrderPriority.cs" />
+    <Compile Include="Hidistro.Core\ProductTempSQLADD.cs" />
+    <Compile Include="Hidistro.Core\ResourcesHelper.cs" />
+    <Compile Include="Hidistro.Core\Serializer.cs" />
+    <Compile Include="Hidistro.Core\SettingsManager.cs" />
+    <Compile Include="Hidistro.Core\TemplatePageControl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

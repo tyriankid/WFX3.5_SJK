@@ -1,0 +1,36 @@
+﻿<%@ Control Language="C#" %>
+<%@ Register TagPrefix="Hi" Namespace="HiTemplate" Assembly="HiTemplate" %>
+        <div class="members_con" style="margin:0 auto">
+            
+            <section class="members_flash j-swipe" id="mySwipe">
+                <ul class="clearfix">
+                    
+                        
+                            <li>
+                                <a href="" title="">
+                                    
+                                    
+                                    <img src="http://localhost:43853/Storage/template/20170913/6364089454905368889636535.JPG" width="100%" />
+                                    
+                                    
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+                <section class="members_flash_time">
+                    
+                </section>
+            </section>
+            
+        </div>
+    
+        <div class="members_con">
+            <section class="members_search">
+                  <form action="/ProductList.aspx" method="get">
+                <input type="text" name="keyWord" id="keyWord" value="" placeholder="商品搜索：请输入商品关键字">
+                <button type="submit"></button>
+           </form>
+            </section>
+        </div>
+    <Hi:GoodsListModule runat="server"  Type="goodGroup" Layout="4" ShowName="True" ShowIco="True" ShowPrice="True" DataUrl="/api/Hi_Ajax_GoodsListGroup.ashx" ID="group_d0357444fc6d4ece8aa24544f19526b8" TemplateFile="/Admin/shop/Modules/GoodGroup4.cshtml"  GoodListSize="18" FirstPriority=""  SecondPriority="3"  ShowMaketPrice="True"  />

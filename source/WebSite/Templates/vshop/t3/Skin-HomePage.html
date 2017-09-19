@@ -1,0 +1,56 @@
+﻿<%@ Control Language="C#" %>
+<%@ Register TagPrefix="Hi" Namespace="HiTemplate" Assembly="HiTemplate" %>
+        <header class="members_head">
+            <section class="members_head_top">
+                <img src="/Templates/vshop/t3/images/banner@2x.png">
+                <b id ="StoreName">店铺主页</b>
+            </section>
+            <section class="members_head_nav">
+                <section class="members_head_nav_le"><img src="/Templates/vshop/t3/images/head@2x.png" id="imglogo" width="65" height="65"></section>
+                <section class="members_head_nav_ri">
+                    <ul>
+                        <li>
+                            <span class="allgoods"></span>
+                            <a href="/ProductList.aspx">全部商品</a>
+                        </li>
+                        <li>
+                            <span class="active"></span>
+					<a href="/activities.aspx">店铺活动</a>
+                        </li>
+                        <li>
+                            <span class="orderpic"></span>
+                            <a href="/Vshop/MemberOrders.aspx">我的订单</a>
+                        </li>
+                        <li>
+                            <span class="sign"></span>
+                            <a href="/Vshop/MemberCenter.aspx">会员签到</a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </header>
+    
+        <div class="members_con"  >
+            <section class="members_nav1">
+                <ul>
+                    
+                    
+                    <li class="lisw1">
+                        <span><a href="/BargainList.aspx"><img src="/Templates/vshop/t3/images/6@2x.png" width="70"></a></span>
+                        <a class="members_nav1_name" href="/BargainList.aspx">好友砍价</a>
+                    </li>
+                    
+                    
+                </ul>
+            </section>
+        </div>
+    <Hi:GoodsMobule runat="server" Layout="1" ShowName="1" IDs="2107,2106,2105,2104" ShowIco="True" ShowPrice="True" DataUrl="/api/Hi_Ajax_GoodsList.ashx" ID="goods_0904d39d82bd42609a22b967b4dba99f" TemplateFile="/admin/shop/Modules/GoodGroup1.cshtml"    /><Hi:GoodsListModule runat="server"  Type="goodGroup" Layout="1" ShowName="True" ShowIco="True" ShowPrice="True" DataUrl="/api/Hi_Ajax_GoodsListGroup.ashx" ID="group_392072dd1ac34ec0b25a9bc2221c9cb1" TemplateFile="/Admin/shop/Modules/GoodGroup1.cshtml"  GoodListSize="6" FirstPriority=""  SecondPriority=""    />
+        <div class="members_con">
+            <section class="custom-space" style="height:10px;"></section>
+        </div>
+    
+        <div class="members_con">
+            <section class="custom-line-wrap"><hr class="custom-line" style="border-color:#de11b8" ></section> 
+  
+        </div>
+    

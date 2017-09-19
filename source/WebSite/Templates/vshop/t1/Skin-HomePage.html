@@ -1,0 +1,24 @@
+﻿<%@ Control Language="C#" %>
+<%@ Register TagPrefix="Hi" Namespace="HiTemplate" Assembly="HiTemplate" %>
+        <div class="members_con" style="margin:0 auto">
+            
+            <section class="members_imgad">
+                <ul class="clearfix">
+                    
+                    
+                    <li style="margin-bottom:0px">
+                        <a href="/Default.aspx" title="店铺主页">
+                            
+                            
+                            <img src="/Templates/vshop/t1/images/30banner01.jpg" width="100%" />
+                            
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </section>
+            
+        </div>
+    <Hi:GoodsListModule runat="server"  Type="goodGroup" Layout="4" ShowName="True" ShowIco="True" ShowPrice="True" DataUrl="/api/Hi_Ajax_GoodsListGroup.ashx" ID="group_c2b75f9fceb245658e428e96b84ce823" TemplateFile="/Admin/shop/Modules/GoodGroup4.cshtml"  GoodListSize="18" FirstPriority=""  SecondPriority="3"  ShowMaketPrice="True"  />

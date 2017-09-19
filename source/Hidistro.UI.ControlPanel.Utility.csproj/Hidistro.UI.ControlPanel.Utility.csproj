@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{19994C7D-E73D-4067-92B9-004E9987B6AA}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Hidistro.UI.ControlPanel.Utility</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\AdminPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\AllowLoginRadioButtonList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\AttributeUseageModeRadioButtonList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\BaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\BrandCategoriesCheckBoxList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\DistributorGradeDropDownList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\ExpressCheckBoxList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\ExpressPrintButton.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\GiftStatusRadioButtonList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\GridSkuMemberPriceTable.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\HiControls.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\ImageDataGradeDropDownList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\ImageTypeLabel.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\LogsUserNameDropDownList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\MemberGradeCheckBoxList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\MemberGradeDropDownList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\MemberHasVipCardDropDownList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\MemberPriceDropDownList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\MemberSearch.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\Navigation.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\NavItem.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\NavModule.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\NavPageLink.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\PaymentDropDownList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\ProductCategoriesDropDownList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\ProductCategoriesDropDownListNew.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\ProductCategoriesListBox.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\ProductEditColumn.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\ProductTypesCheckBoxList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\PurchaseOrderItemUpdateHyperLink.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\RegionArea.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\RoleDropDownList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\ShippersDropDownList.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\SiteNameLabel.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\SKUImage.cs" />
+    <Compile Include="Hidistro.UI.ControlPanel.Utility\UseAttributeImageRadioButtonList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hidistro.ControlPanel.csproj\Hidistro.ControlPanel.csproj">
+      <Project>{574cb976-5d61-4c7a-b0f3-5c777e8260ad}</Project>
+      <Name>Hidistro.ControlPanel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.Core.csproj\Hidistro.Core.csproj">
+      <Project>{eb0a32a6-fadd-4b43-9bc3-28ec243edddd}</Project>
+      <Name>Hidistro.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.Entities.csproj\Hidistro.Entities.csproj">
+      <Project>{b364dc27-47fa-4001-af48-dece180b1d74}</Project>
+      <Name>Hidistro.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.SaleSystem.Vshop.csproj\Hidistro.SaleSystem.Vshop.csproj">
+      <Project>{d7300a1f-550b-4073-bfde-0c3501ab7cce}</Project>
+      <Name>Hidistro.SaleSystem.Vshop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.UI.Common.Controls.csproj\Hidistro.UI.Common.Controls.csproj">
+      <Project>{29215e7e-be78-49d5-9b36-ec938cf54b6c}</Project>
+      <Name>Hidistro.UI.Common.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hishop.Components.Validation\Hishop.Components.Validation.csproj">
+      <Project>{a966fd0e-4b58-48e7-b9bf-3f9f39f3a3de}</Project>
+      <Name>Hishop.Components.Validation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

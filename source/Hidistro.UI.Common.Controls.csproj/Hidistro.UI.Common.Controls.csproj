@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{29215E7E-BE78-49D5-9B36-EC938CF54B6C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Hidistro.UI.Common.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="AopSdk">
+      <HintPath>..\dll\AopSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ASPNET.WebControls">
+      <HintPath>..\dll\ASPNET.WebControls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hidistro.UI.Common.Controls\BrandCategoriesDropDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ButtonManager.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ButtonWrapper.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ClassShowOnDataLitl.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\CloseTranReasonDropDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\CnzzShow.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\CustomChart.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\DecimalLengthDropDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\DistributorGradeLitral.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ExportFieldsCheckBoxList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ExportFormatRadioButtonList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ExpressRadioButtonList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\FormatedMoneyLabel.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\FormatedSiteUrl.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\FormatedTimeLabel.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\Formatter.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\FormFixerHtml32TextWriter.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\FormFixerHtmlTextWriter.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\FreightTemplateDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\GroupBuyStatusLabel.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\HeadContainer.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\HiImage.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\HiLabel.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\HiLiteral.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\HiPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hidistro.UI.Common.Controls\HourDropDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\HtmlDecodeTextBox.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\IButton.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ImageLinkButton.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ImageLinkButtonWrapper.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ImageOrderDropDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ImagePosition.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ImageUploader.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\IText.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\LabelWrapper.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\LeaveListTime.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\LicenseControl.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\LinkButtonWrapper.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ListImage.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ListRadioButton.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\LiteralWrapper.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\MailPriorityRadioButtonList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\MeiQiaSet.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\MoneyColumnForAdmin.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\MonthDropDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\OperationDropDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\OrderAdminRemark.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\OrderCombineStatus.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\OrderItemsStatus.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\OrderItemStatusAndRefundLabel.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\OrderItemStatusLabel.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\OrderRemarkImage.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\OrderRemarkImageRadioButtonList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\OrderStatusLabel.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\OrderStautsDropDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\OrderUserRemark.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\PageSizeDropDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\PageTitle.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ProductDetailsLink.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ProductFlashUpload.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ProductTagsDropDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ProductTagsLiteral.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ProductTypeDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\RefundOrderModeRadioButtonList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\RegionAllName.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\RegionHandler.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\RegionSelector.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\SaleStatisticsTypeRadioButtonList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\SaleStatusDropDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\Script.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\ServiceSet.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\SimpleTemplatedWebControl.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\SiteUrl.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\SkinNotFoundException.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\SmallStatusMessage.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\StatusMessage.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\Style.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\SubStringLabel.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\SystemPageDropDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\TemplatedWebControl.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\TextControlHelper.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\TrimTextBox.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\UpImg.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\UploadHandler.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\UploadType.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\UserStatisticeChart.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\VMemberTemplatedWebControl.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\VshopTemplatedRepeater.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\VshopTemplatedWebControl.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\WangWangConversations.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\WeixinSet.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\YearDropDownList.cs" />
+    <Compile Include="Hidistro.UI.Common.Controls\YesNoRadioButtonList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Hidistro.UI.Common.Controls\ImageUploader.css.style.css" />
+    <EmbeddedResource Include="Hidistro.UI.Common.Controls\ImageUploader.images.upload.png" />
+    <EmbeddedResource Include="Hidistro.UI.Common.Controls\ImageUploader.script.upimg.js" />
+    <EmbeddedResource Include="Hidistro.UI.Common.Controls\ImageUploader.script.upload.js" />
+    <EmbeddedResource Include="Hidistro.UI.Common.Controls\region.helper.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hidistro.ControlPanel.csproj\Hidistro.ControlPanel.csproj">
+      <Project>{574cb976-5d61-4c7a-b0f3-5c777e8260ad}</Project>
+      <Name>Hidistro.ControlPanel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.Core.csproj\Hidistro.Core.csproj">
+      <Project>{eb0a32a6-fadd-4b43-9bc3-28ec243edddd}</Project>
+      <Name>Hidistro.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.Entities.csproj\Hidistro.Entities.csproj">
+      <Project>{b364dc27-47fa-4001-af48-dece180b1d74}</Project>
+      <Name>Hidistro.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.SaleSystem.Vshop.csproj\Hidistro.SaleSystem.Vshop.csproj">
+      <Project>{d7300a1f-550b-4073-bfde-0c3501ab7cce}</Project>
+      <Name>Hidistro.SaleSystem.Vshop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hishop.AlipayFuwu.Api.csproj\Hishop.AlipayFuwu.Api.csproj">
+      <Project>{de515fae-8cec-4221-85b6-cfb6b7663c55}</Project>
+      <Name>Hishop.AlipayFuwu.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hishop.Weixin.MP.csproj\Hishop.Weixin.MP.csproj">
+      <Project>{8da0d1e4-2631-48bc-804d-6e4da16fa03c}</Project>
+      <Name>Hishop.Weixin.MP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

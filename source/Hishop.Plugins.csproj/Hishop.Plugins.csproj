@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{88DF1A2E-2419-4E38-8434-0368704713BD}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Hishop.Plugins</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hishop.Plugins.Integration\IntegrateProvider.cs" />
+    <Compile Include="Hishop.Plugins.Integration\UserEntity.cs" />
+    <Compile Include="Hishop.Plugins\AuthenticatedEventArgs.cs" />
+    <Compile Include="Hishop.Plugins\ConfigablePlugin.cs" />
+    <Compile Include="Hishop.Plugins\ConfigData.cs" />
+    <Compile Include="Hishop.Plugins\ConfigElementAttribute.cs" />
+    <Compile Include="Hishop.Plugins\ConfigHandler.cs" />
+    <Compile Include="Hishop.Plugins\EmailPlugins.cs" />
+    <Compile Include="Hishop.Plugins\EmailSender.cs" />
+    <Compile Include="Hishop.Plugins\FailedEventArgs.cs" />
+    <Compile Include="Hishop.Plugins\FinishedEventArgs.cs" />
+    <Compile Include="Hishop.Plugins\InputType.cs" />
+    <Compile Include="Hishop.Plugins\IPlugin.cs" />
+    <Compile Include="Hishop.Plugins\LogisticsPlugins.cs" />
+    <Compile Include="Hishop.Plugins\OpenIdNotify.cs" />
+    <Compile Include="Hishop.Plugins\OpenIdPlugins.cs" />
+    <Compile Include="Hishop.Plugins\OpenIdService.cs" />
+    <Compile Include="Hishop.Plugins\PaymentNotify.cs" />
+    <Compile Include="Hishop.Plugins\PaymentPlugins.cs" />
+    <Compile Include="Hishop.Plugins\PaymentRequest.cs" />
+    <Compile Include="Hishop.Plugins\PluginAttribute.cs" />
+    <Compile Include="Hishop.Plugins\PluginContainer.cs" />
+    <Compile Include="Hishop.Plugins\PluginItem.cs" />
+    <Compile Include="Hishop.Plugins\PluginItemCollection.cs" />
+    <Compile Include="Hishop.Plugins\SMSPlugins.cs" />
+    <Compile Include="Hishop.Plugins\SMSSender.cs" />
+    <Compile Include="Hishop.Plugins\Utils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

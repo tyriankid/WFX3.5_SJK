@@ -1,0 +1,463 @@
+﻿<hi:common_header runat="server" />
+<meta name="format-detection" content="telephone=no" />
+<script src="/script/swipe.js"></script>
+<script src="../../Utility/ForceFollow.js"></script>
+<script src="/script/datePicker.js"></script>
+<style>
+    body {
+        background: #FFF;
+    }
+
+    .containerbox {
+        width: 100%;
+        overflow:hidden;
+        padding:10px;
+    }
+
+    .container-left {
+        /*width: 40%;*/
+        float: left;
+    }
+
+   .container-left img {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            left: 10%;
+        }
+
+    .container-right {
+        /*width: 60%;*/
+        /*float: right;*/
+        margin-left:120px;
+    }
+
+        .container-right h3 {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .container-right p {
+            font-size: 14px;            
+            line-height: 25px;
+        }
+
+    .tian {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+        .tian span {
+            height: 30px;
+            display: inline-block;
+            background: #F1F1F1;
+            margin-left: 10px;
+            border-radius: 5px;
+            line-height: 30px;
+            padding: 0px 5px;
+            font-size: 14px;
+        }
+
+    .song p {
+        text-align: center;
+        font-size: 14px;
+    }
+
+        .song p input[type=radio] {
+            width: 15px;
+            height: 15px;
+            position: relative;
+            top: 2px;
+            right: 5px;
+        }
+
+    .zongbox p {
+        font-size: 14px;
+        width: 80%;
+        height: 40px;
+        line-height: 40px;
+        font-weight: bold;
+        color: #000;
+        position: relative;
+        left: 20%;
+    }
+
+    .zongbox {
+        padding:0 0 30px 0;
+        width:80%;
+        margin:0 auto;
+    }
+
+        .zongbox p span {
+            color: red;
+            margin: 0 10px;
+        }
+
+    .btn1 {
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+        .btn1 a {
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            background: #DEA992;
+            border-radius: 20px;
+            text-align: center;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    .DataBox{margin-top:20px;}
+    .DataBox p {
+        font-size: 14px;
+        /*position: relative;
+        left: 12%;
+        width: 85%;*/
+        text-align:center;
+
+    }
+
+    .DataBox input[type=text] {
+        width: 125px;
+        height: 35px;
+        line-height: 35px;
+        border-radius: 5px;
+        border: 1px solid #CCC;
+    }
+    .goods-num{
+        width:80%;
+        margin:0 auto;
+    }
+    .cardbox .card {
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        position: relative;
+        left: 26%;
+        /*background: #4290D1;
+        text-align: center;
+        color:#FFF;
+        border-bottom:1px solid #CCC;*/
+    }
+    .cardbox .card span{
+        background-color:#4290D1;
+        color:#FFF;
+        padding:5px 10px;
+        border-radius:3px;
+        margin-left:8px;
+    }
+    .cardlogin {
+        width:100%;
+        padding: 10px;
+        background: #4290D1;
+        display: none;
+        position: absolute;
+        top: 30%;
+        z-index: 9;
+    }
+    .cardlogin p{
+        height:40px;
+        line-height:40px;
+        font-size:14px;
+        text-align:center;
+        color:#FFF;       
+    }
+    .cardlogin p input[type=text]{
+        width:60%;
+        height:35px;
+        line-height:35px;
+        color:#333;
+    }
+     .cardlogin .bttn{
+         color:#FFF;
+         width:120px;
+         height:35px;
+         line-height:35px;
+         text-align:center;                 
+         background:#D10017;         
+         display: inline-block;
+         border-radius:5px;
+     }
+     .card .icon-arrow-bottom{
+         margin-left:8px;
+     }
+    #overlay {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.5;
+        filter: alpha(opacity=30);
+        z-index: 9;
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+    }
+</style>
+<link href="/style/detailadd.css" rel="stylesheet" type="text/css">
+<link href="../../Admin/iconfont/iconfont.css" rel="stylesheet" />
+<link href="/style/shijian.css" rel="stylesheet" />
+<script src="../../Admin/iconfont/iconfont.js"></script>
+<div class="y-navtop">
+    <h1>按周期订购</h1>
+    <a class="y-return" href="javascript:;" onclick="goBack()">返回</a>
+</div>
+
+<div class="containerbox">
+    <div class="container-left">
+        <asp:image runat="server" id="productImg" alt="Alternate Text" />
+    </div>
+    <div class="container-right">
+        <h3><asp:literal runat="server" id="litProductName" /></h3>
+        <p>单价：<span style="color:red;">￥<asp:literal runat="server" id="litSalePrice" /></span></p>
+        <p>原价：<span style="text-decoration:line-through;color:#999;">￥<asp:literal runat="server" id="litPrice" /></span></p>
+        <p>已售：<asp:literal runat="server" id="litSalesCount" />件</p>
+    </div>
+</div>
+<!--开始截止日期-->
+<div class="DataBox">
+    <p style="padding-right:54px;">开始日期：<input type="text" id="startDate" value="" /></p>
+    <p style="margin-top:10px;">截止日期：<input type="text" id="endDate" value="" /><span style="color:red;margin-left:5px;font-size:12px;">(*可选择)</span></p>
+</div>
+
+<!--天数-->
+<div class="tian">
+    <span style="background:#4290D1;color:#FFF;" value="30">30天</span><span value="60">60天</span><span value="90">90天</span><span value="180">180天</span><span value="360">360天</span>
+</div>
+<!--数量-->
+<div class="well">
+    <div class="buy-num">
+        <div class="list clearfix">
+            <div class="goods-num clearfix">
+                <span style="line-height:30px;margin-right:10px;margin-left:13%;font-size:14px;">每天数量：</span>
+                <div id="spSub" class="shopcart-minus">-</div>
+                <input type="tel" id="buyNum" class="form-control" value="1" maxlength="3" />
+                <div id="spAdd" class="shopcart-add">+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="song" style="display:none">
+    <p><input type="radio" name="name" value="" />下午送奶<span>(大约15:00-20:30)</span></p>
+</div>
+<div id="overlay"></div>
+<div class="cardbox">
+    <p class="card">我的奶卡：<span>使用奶卡</span></p>
+    <div class="cardlogin">
+        <div class="tkyy_con">
+            <p style="background-color:#4290D1;color:#FFF;text-align:center;">我的奶卡</p>
+            <p>卡号：<input type="text" name="name" role="cardNum" placeholder="请输入卡号" /></p>
+            <p>密码：<input type="text" name="name" role="cardPwd" placeholder="请输入密码" /></p>
+            <p style="text-align:center;margin-top:10px;"><a class="bttn" href="#" onclick="checkMilkCard()">确定</a></p>
+        </div>
+    </div>
+</div>
+
+<!--订奶天数-->
+<div class="zongbox">
+    <p>订奶总天数：<span role="strSendDays">30</span>天</p>
+    <p>订奶总数量：<span role="strTotalCount">30</span>盒/瓶/袋</p>
+    <p>奶款(RMB)：<span role="strTotalPrice">120.00</span>元</p>
+</div>
+<!--按钮-->
+<section class="mdetail_bottom">
+    <section class="collect bdbox">
+        <a href="/Default.aspx"><img width="50" height="50" src="/images/home.png"></a>
+    </section>
+    <section class="actions bdbox clearfix">
+        <!--<a id="addcartButton" type="shoppingBtn" onclick="AddProductToCart()" data-type="add" class="btn-popupSKU-addcart j-openPopupSKU" href="/Vshop/ShoppingCart.aspx">加入购物车</a>-->
+        <a style="background-color:#D10017;" id="btnOrderMilk" type="shoppingBtn" data-type="buy" class="btn-popupSKU-buynow j-openPopupSKU">订购</a>
+    </section>
+</section>
+
+<input type="hidden" runat="server" id="hidDelayDays" clientidmode="static" />
+<input type="hidden" runat="server" id="hidPrice" clientidmode="static" />
+<!-- 续订相关属性-->
+<input type="hidden" runat="server" id="hidQuantityPerDay" clientidmode="static" />
+<input type="hidden" runat="server" id="hidSendDays" clientidmode="static" />
+<input type="hidden" runat="server" id="hidSendStartDate" clientidmode="static" />
+<input type="hidden" runat="server" id="hidSendEndDate" clientidmode="static" />
+
+<input type="hidden" runat="server" id="hidProductSku" clientidmode="static" />
+<script type="text/javascript">
+    //返回
+    function goBack() {
+        var backUrl = document.referrer;
+        if (backUrl == "") {
+            backUrl = "/ProductList.aspx"
+        }
+        location.href = backUrl;
+    }
+
+    function getYMD(d) {
+        var Y = d.getFullYear() + '-';
+        var M = (d.getMonth() + 1 < 10 ? '0' + (d.getMonth() + 1) : d.getMonth() + 1) + '-';
+        var D = (d.getDate() < 10 ? '0' + (d.getDate()) : d.getDate());
+        return (Y + M + D);
+    }
+
+    function checkMilkCard() {
+        var cardnum = $("[role='cardNum']").val();
+        var cardpwd = $("[role='cardPwd']").val();
+        if (cardnum.length != 17) {
+            alert_h("卡号错误！"); return;
+        }
+        if (cardpwd.length != 8) {
+            alert_h("密码错误！"); return;
+        }
+
+        $.ajax({
+            url: "/API/VshopProcess.ashx",
+            type: 'post', dataType: 'json', timeout: 10000,
+            data: { action: "CheckMilkCard", cardNum: cardnum, cardPwd: cardpwd },
+            success: function (e) {
+                switch (e.success) {
+                    case 1:
+                        alert_h("验证通过，跳转至下单页面");
+                        location.href = "/Vshop/SubmmitOrder.aspx?buyAmount=0&cardid=" + e.cardid + "&productSku=" + e.productsku + "&limitedTimeDiscountId=" + 0 + "&from=signBuy&ReferralId=" + getParam("ReferralId")
+                            + "&quantityPerDay=" + e.quantityPerDay + "&startDate=" + e.startDate + "&sendDays=" + e.sendDays;
+
+                        break;
+                    case -1:
+                        alert_h(e.msg);
+                        break;
+                }
+            }
+        });
+    }
+
+    $(function () {
+        var oneDay = 1000 * 60 * 60 * 24;
+        var delayDays = parseInt($("#hidDelayDays").val());
+        var startDateSpan = Date.parse(new Date()) + oneDay * delayDays;
+        var startDate = new Date(startDateSpan);
+        var endDateSpan = Date.parse(new Date());
+        var endDate = new Date(endDateSpan);
+        var startDateStr = getYMD(startDate);
+        $("#startDate").val(startDateStr);
+
+        //选择天数
+        $(".tian").find("span").click(function () {
+            $(this).css({ "background": "#4290D1", "color": "#FFF" });
+            $(this).siblings().css({ "background": "#F1F1F1", "color": "#666" });
+            //联动结束日期
+            endDateSpan = startDateSpan + (parseInt($(this).attr("value")) - 1) * oneDay;
+            endDate = new Date(endDateSpan);
+            var endDateStr = getYMD(endDate);
+            $("#endDate").val(endDateStr);
+            getSendDays();
+        });
+        $("#buyNum").bind("change", function () {
+            getSendDays();
+        });
+
+        $("#spAdd").bind("click", function () {
+            $("#buyNum").val(parseInt($("#buyNum").val()) + 1); getSendDays();
+        });
+        $("#spSub").bind("click", function () {
+            var num = parseInt($("#buyNum").val()) - 1;
+            if (num > 0)
+                $("#buyNum").val(parseInt($("#buyNum").val()) - 1);
+            getSendDays();
+        });
+
+        //如果包含了续订参数，默认选中
+        var xdSendDays = $("#hidSendDays").val();
+        var xdQuantityPerDay = $("#hidQuantityPerDay").val();
+        if (xdSendDays) {
+            $(".tian").find("[value='" + xdSendDays + "']").click(); 
+            $("#startDate").val($("#hidSendStartDate").val());
+            $("#endDate").val($("#hidSendEndDate").val());
+            $("#buyNum").val(xdQuantityPerDay);
+            getSendDays();
+        } else {
+            $(".tian").find("span").eq(0).click();
+        }
+
+        //日期选择控件初始化
+        var calendar = new datePicker();
+        calendar.init({
+            'trigger': '#startDate', /*按钮选择器，用于触发弹出插件*/
+            'type': 'date',/*模式：date日期；datetime日期时间；time时间；ym年月；*/
+            'minDate': startDateStr,/*最小日期*/
+            'maxDate': '2020-12-31',/*最大日期*/
+            'onSubmit': function () {/*确认时触发事件*/
+                getSendDays();
+            },
+            'onClose': function () {/*取消时触发事件*/
+            }
+        });
+
+        var calendar = new datePicker();
+        calendar.init({
+            'trigger': '#endDate', /*按钮选择器，用于触发弹出插件*/
+            'type': 'date',/*模式：date日期；datetime日期时间；time时间；ym年月；*/
+            'minDate': startDateStr,/*最小日期*/
+            'maxDate': '2020-12-31',/*最大日期*/
+            'onSubmit': function () {/*确认时触发事件*/
+                getSendDays();
+            },
+            'onClose': function () {/*取消时触发事件*/
+            }
+        });
+
+        function getSendDays() {
+            //计算总配送天数
+            var sendDay = (new Date($("#endDate").val()) - new Date($("#startDate").val())) / oneDay + 1;
+            $(".tian").find("span").css({ "background": "#F1F1F1", "color": "#666" });
+            $(".tian").find("[value='" + sendDay + "']").css({ "background": "#D94B00", "color": "#FFF" });
+            //如果订购日期小于30天,则自动将结束日期增加小于的天数
+            if (sendDay < 30) {
+                //联动结束日期
+                endDateSpan = Date.parse(new Date($("#startDate").val())) + (29 * oneDay);
+                endDate = new Date(endDateSpan);
+                endDateStr = getYMD(endDate);
+                $("#endDate").val(endDateStr);
+                getSendDays();
+                return;
+            }
+            $("[role='strSendDays']").html(sendDay);
+            //计算总价总数量 sendDays * price * quantityPerDay
+            var price = parseFloat($("#hidPrice").val());
+            var quantity = parseInt($("#buyNum").val());
+            var totalCount = sendDay * parseInt(quantity);
+            $("[role = 'strTotalCount']").html(totalCount);
+            var totalPrice = (sendDay * parseInt(price * 100) * quantity) / 100;
+            $("[role = 'strTotalPrice']").html(totalPrice);
+        }
+    });
+
+    //点击弹出奶卡登录层
+    $(document).ready(function () {
+        $(".card").find("span").click(function (event) {
+            event.stopPropagation(); //停止事件冒泡
+            $(".cardlogin").toggle();
+            $("#overlay").toggle();
+        });
+        //点击空白处隐藏弹出层
+        $("body").click(function (event) {
+            var _con = $('.tkyy_con');  // 设置目标区域
+            if (!_con.is(event.target) && _con.has(event.target).length == 0) {
+                $('.cardlogin').hide();     //淡出消失
+                $("#overlay").hide();
+            }
+        });
+
+    });
+</script>
+
+
+
+
+<script src="/utility/vproduct.helper.js?v=2" type="application/javascript"> </script>
+<hi:common_footer runat="server" />

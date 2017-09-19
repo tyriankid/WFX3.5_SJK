@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{8DA0D1E4-2631-48BC-804D-6E4DA16FA03C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Hishop.Weixin.MP</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hishop.Weixin.MP.Api\BarCodeApi.cs" />
+    <Compile Include="Hishop.Weixin.MP.Api\MenuApi.cs" />
+    <Compile Include="Hishop.Weixin.MP.Api\NewsApi.cs" />
+    <Compile Include="Hishop.Weixin.MP.Api\TemplateApi.cs" />
+    <Compile Include="Hishop.Weixin.MP.Api\TokenApi.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain.Menu\BaseButton.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain.Menu\ButtonGroup.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain.Menu\Menu.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain.Menu\SingleButton.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain.Menu\SingleClickButton.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain.Menu\SingleViewButton.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain.Menu\SubMenu.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain\Article.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain\Image.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain\IMedia.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain\IThumbMedia.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain\Music.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain\TemplateMessage.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain\Token.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain\User.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain\Video.cs" />
+    <Compile Include="Hishop.Weixin.MP.Domain\Voice.cs" />
+    <Compile Include="Hishop.Weixin.MP.Handler\RequestHandler.cs" />
+    <Compile Include="Hishop.Weixin.MP.Request.Event\ClickEventRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP.Request.Event\LocationEventRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP.Request.Event\MassendJobFinishEventRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP.Request.Event\ScanEventRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP.Request.Event\SubscribeEventRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP.Request.Event\UnSubscribeEventRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP.Request\EventRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP.Request\ImageRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP.Request\LinkRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP.Request\LocationRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP.Request\TextRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP.Request\VideoRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP.Request\VoiceRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP.Response\ImageResponse.cs" />
+    <Compile Include="Hishop.Weixin.MP.Response\MusicResponse.cs" />
+    <Compile Include="Hishop.Weixin.MP.Response\NewsResponse.cs" />
+    <Compile Include="Hishop.Weixin.MP.Response\TextResponse.cs" />
+    <Compile Include="Hishop.Weixin.MP.Response\VideoResponse.cs" />
+    <Compile Include="Hishop.Weixin.MP.Response\VoiceResponse.cs" />
+    <Compile Include="Hishop.Weixin.MP.Test\A.cs" />
+    <Compile Include="Hishop.Weixin.MP.Test\Tests.cs" />
+    <Compile Include="Hishop.Weixin.MP.Test\Utils.cs" />
+    <Compile Include="Hishop.Weixin.MP.Util\CheckSignature.cs" />
+    <Compile Include="Hishop.Weixin.MP.Util\EntityHelper.cs" />
+    <Compile Include="Hishop.Weixin.MP.Util\EventTypeHelper.cs" />
+    <Compile Include="Hishop.Weixin.MP.Util\MsgTypeHelper.cs" />
+    <Compile Include="Hishop.Weixin.MP.Util\RequestMessageFactory.cs" />
+    <Compile Include="Hishop.Weixin.MP.Util\WebUtils.cs" />
+    <Compile Include="Hishop.Weixin.MP\AbstractRequest.cs" />
+    <Compile Include="Hishop.Weixin.MP\AbstractResponse.cs" />
+    <Compile Include="Hishop.Weixin.MP\ButtonType.cs" />
+    <Compile Include="Hishop.Weixin.MP\RequestEventType.cs" />
+    <Compile Include="Hishop.Weixin.MP\RequestMsgType.cs" />
+    <Compile Include="Hishop.Weixin.MP\ResponseMsgType.cs" />
+    <Compile Include="Hishop.Weixin.MP\WeixinException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{C252BE0E-50DE-49DC-B987-C41740D7E5DF}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Hidistro.UI.SaleSystem.Tags</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Hidistro.UI.SaleSystem.Tags</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hidistro.UI.SaleSystem.Tags\Common_ActivityCondition.cs" />
+    <Compile Include="Hidistro.UI.SaleSystem.Tags\Common_CouponSelect.cs" />
+    <Compile Include="Hidistro.UI.SaleSystem.Tags\Common_Daily.cs" />
+    <Compile Include="Hidistro.UI.SaleSystem.Tags\Common_ExpandAttributes.cs" />
+    <Compile Include="Hidistro.UI.SaleSystem.Tags\Common_Footer.cs" />
+    <Compile Include="Hidistro.UI.SaleSystem.Tags\Common_Header.cs" />
+    <Compile Include="Hidistro.UI.SaleSystem.Tags\Common_MemberCardCondition.cs" />
+    <Compile Include="Hidistro.UI.SaleSystem.Tags\Common_MyBaseHeader.cs" />
+    <Compile Include="Hidistro.UI.SaleSystem.Tags\Common_PaymentTypeSelect.cs" />
+    <Compile Include="Hidistro.UI.SaleSystem.Tags\Common_PrizeNames.cs" />
+    <Compile Include="Hidistro.UI.SaleSystem.Tags\Common_ProductImages.cs" />
+    <Compile Include="Hidistro.UI.SaleSystem.Tags\Common_SKUSelector.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hidistro.ControlPanel.csproj\Hidistro.ControlPanel.csproj">
+      <Project>{574cb976-5d61-4c7a-b0f3-5c777e8260ad}</Project>
+      <Name>Hidistro.ControlPanel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.Core.csproj\Hidistro.Core.csproj">
+      <Project>{eb0a32a6-fadd-4b43-9bc3-28ec243edddd}</Project>
+      <Name>Hidistro.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.Entities.csproj\Hidistro.Entities.csproj">
+      <Project>{b364dc27-47fa-4001-af48-dece180b1d74}</Project>
+      <Name>Hidistro.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.SaleSystem.Vshop.csproj\Hidistro.SaleSystem.Vshop.csproj">
+      <Project>{d7300a1f-550b-4073-bfde-0c3501ab7cce}</Project>
+      <Name>Hidistro.SaleSystem.Vshop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.UI.Common.Controls.csproj\Hidistro.UI.Common.Controls.csproj">
+      <Project>{29215e7e-be78-49d5-9b36-ec938cf54b6c}</Project>
+      <Name>Hidistro.UI.Common.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,103 @@
+﻿<%@ Control Language="C#" %>
+<%@ Register TagPrefix="Hi" Namespace="HiTemplate" Assembly="HiTemplate" %>
+        <div class="members_con" style="margin:0 auto">
+            
+            <section class="members_flash j-swipe" id="mySwipe">
+                <ul class="clearfix">
+                    
+                        
+                            <li>
+                                <a href="/Default.aspx" title="店铺主页">
+                                    
+                                    
+                                    <img src="/Templates/vshop/t1/images/30banner01.jpg" width="100%" />
+                                    
+                                    
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+                <section class="members_flash_time">
+                    
+                </section>
+            </section>
+            
+        </div>
+    
+        <div class="members_con"  >
+            <section class="members_nav1">
+                <ul>
+                    
+                    
+                    <li class="lisw2">
+                        <span><a href="/Default.aspx"><img src="/Templates/vshop/t1/images/30nev01.jpg" width="70"></a></span>
+                        <a class="members_nav1_name" href="/Default.aspx"></a>
+                    </li>
+                    
+                    <li class="lisw2">
+                        <span><a href="/Default.aspx"><img src="/Templates/vshop/t1/images/30nev02.jpg" width="70"></a></span>
+                        <a class="members_nav1_name" href="/Default.aspx"></a>
+                    </li>
+                    
+                    
+                </ul>
+            </section>
+        </div>
+    <Hi:GoodsListModule runat="server"  Type="goodGroup" Layout="4" ShowName="True" ShowIco="True" ShowPrice="True" DataUrl="/api/Hi_Ajax_GoodsListGroup.ashx" ID="group_cf610b02c63048b3b5af811a941507b0" TemplateFile="/Admin/shop/Modules/GoodGroup4.cshtml"  GoodListSize="6" FirstPriority=""  SecondPriority="3"  ShowMaketPrice="True"  />
+        <div class="members_con">
+            <section class="members_search">
+                  <form action="/ProductList.aspx" method="get">
+                <input type="text" name="keyWord" id="keyWord" value="" placeholder="商品搜索：请输入商品关键字">
+                <button type="submit"></button>
+           </form>
+            </section>
+        </div>
+    
+        <div class="Header_style12_panel" style="height:44px;">
+            <div class="membersbox" style="height:44px;">
+                
+                <div class="homeCnav" style="height:44px;line-height:44px;">
+                    <div class="homeCnavbox swiper-container" style="height:44px;line-height:44px;">
+                        <ul class="swiper-wrapper topnav clearfix" style="height:44px;line-height:44px;">
+                            
+                            <li class="swiper-slide liwid4" style="height:44px;line-height:44px;">
+                                <a href="/Default.aspx" class="colblue" style="background-color:#43758c;height:44px;line-height:44px;margin-right:0px">
+                                    <h3 style="color:#fff;height:44px;line-height:44px;">首页</h3>
+                                </a>
+                            </li>
+                            
+                            <li class="swiper-slide liwid4" style="height:44px;line-height:44px;">
+                                <a href="/ProductList.aspx" class="colblue" style="background-color:#72c201;height:44px;line-height:44px;margin-right:0px">
+                                    <h3 style="color:#fff;height:44px;line-height:44px;">新品</h3>
+                                </a>
+                            </li>
+                            
+                            <li class="swiper-slide liwid4" style="height:44px;line-height:44px;">
+                                <a href="/Default.aspx" class="colblue" style="background-color:#ffa800;height:44px;line-height:44px;margin-right:0px">
+                                    <h3 style="color:#fff;height:44px;line-height:44px;">热卖</h3>
+                                </a>
+                            </li>
+                            
+                            <li class="swiper-slide liwid4" style="height:44px;line-height:44px;">
+                                <a href="/Default.aspx" class="colblue" style="background-color:#d50303;height:44px;line-height:44px;margin-right:0px">
+                                    <h3 style="color:#fff;height:44px;line-height:44px;">推荐</h3>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    
+        <div class="members_con">
+            <section class="custom-line-wrap"><hr class="custom-line" style="border-color:#DDD" ></section> 
+  
+        </div>
+    
+        <div class="members_con">
+            <section class="custom-space" style="height:10px;"></section>
+        </div>
+    

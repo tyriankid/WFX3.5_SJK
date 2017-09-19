@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <log>
+    <OperTime>2016/5/31 20:48:51</OperTime>
+    <appid>wx30ca486377b6ca8d</appid>
+    <mch_id>1229356602</mch_id>
+    <openid>ooxNMtzZgNELfVtXX-jQUGmD-w0k</openid>
+    <nonce_str>2760824</nonce_str>
+    <body>贴贴。活动编号：A160531204719607</body>
+    <out_trade_no>B160531204844275</out_trade_no>
+    <total_fee>100</total_fee>
+    <spbill_create_ip>127.0.0.1</spbill_create_ip>
+    <notify_url>http://xlfj521.vicp.net/pay/wx_Pay.aspx</notify_url>
+    <trade_type>JSAPI</trade_type>
+    <Msg />
+    <Sign>AF94D56EE9C4A37A03F249B5F782C12B</Sign>
+    <Url />
+  </log>
+</DocumentElement>

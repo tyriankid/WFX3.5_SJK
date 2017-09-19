@@ -1,0 +1,196 @@
+﻿<%@ Control Language="C#" %>
+<%@ Register TagPrefix="Hi" Namespace="HiTemplate" Assembly="HiTemplate" %>
+<header class="members_head">	
+	<section class="mobile13_headertop">
+		<img src="/Templates/vshop/t13/images/banner@2x.png" width="100%">
+		<b id="StoreName">店铺主页</b>
+	</section>
+	<section class="mobile13_headerbot">
+		<section class="mobile13_headerbot_le"><img id="imglogo" src="http://demo.xkd.kuaidiantong.cn/Storage/template/20160424/6359710204046386714693649.png" width="65" height="65"></section>
+		<section class="mobile13_headerbot_ri">
+			<ul>
+				<li>
+					<span ><img src="/admin/shop/PublicMob/images/all@2x.png" width="18" height="18"></span>
+					<a href="/ProductList.aspx">全部商品</a>
+				</li>
+				<li>
+					<span><img src="/admin/shop/PublicMob/images/huoodng@2x.png" width="18" height="18"></span>
+					<a href="/activities.aspx">店铺活动</a>
+				</li>
+				<li>
+					<span><img src="/admin/shop/PublicMob/images/5@2x.png" width="18" height="18"></span>
+					<a href="/Vshop/MemberOrders.aspx">我的订单</a>
+				</li>
+				<li>
+					<span><img src="/admin/shop/PublicMob/images/6@2x.png" width="18" height="18"></span>
+					<a href="/Vshop/MemberCenter.aspx">会员签到</a>
+				</li>
+			</ul>
+		</section>
+	</section>
+
+	
+	<section class="mobile13_nav">
+		<ul>
+			
+			<li class="g-box">
+				<a href="/default.aspx" class="mobile13_navle"  style="background-color:#ffba00">
+					<span>新品尝鲜</span>
+					<p>NEW<b></b></p>
+				</a>
+				<a href="/default.aspx" class="mobile13_navri g-flex">
+					<img src="/Templates/vshop/t13/images/tu1@2x.png" width="100%">
+					<strong>活动一</strong>
+				</a>
+			</li>
+			
+			<li class="g-box">
+				<a href="/default.aspx" class="mobile13_navle"  style="background-color:#ed5a5a">
+					<span>热销商品</span>
+					<p>HOT<b></b></p>
+				</a>
+				<a href="/default.aspx" class="mobile13_navri g-flex">
+					<img src="/Templates/vshop/t13/images/tu2@2x.png" width="100%">
+					<strong>活动二</strong>
+				</a>
+			</li>
+			
+			<li class="g-box">
+				<a href="/default.aspx" class="mobile13_navle"  style="background-color:#00a5e7">
+					<span>促销活动</span>
+					<p>SALE<b></b></p>
+				</a>
+				<a href="/default.aspx" class="mobile13_navri g-flex">
+					<img src="/Templates/vshop/t13/images/tu3@2x.png" width="100%">
+					<strong>活动三</strong>
+				</a>
+			</li>
+			
+			<li class="g-box">
+				<a href="/default.aspx" class="mobile13_navle"  style="background-color:#fe5a00">
+					<span>帮助中心</span>
+					<p>HELP<b></b></p>
+				</a>
+				<a href="/default.aspx" class="mobile13_navri g-flex">
+					<img src="/Templates/vshop/t13/images/tu4@2x.png" width="100%">
+					<strong>活动四</strong>
+				</a>
+			</li>
+			
+		</ul>
+	</section>
+	
+</header>
+<Hi:GoodsListModule runat="server"  Type="goodGroup" Layout="1" ShowName="True" ShowIco="True" ShowPrice="True" DataUrl="/api/Hi_Ajax_GoodsListGroup.ashx" ID="group_c094f652bed444fdaa5f48db97646693" TemplateFile="/Admin/shop/Modules/GoodGroup1.cshtml"  GoodListSize="6" FirstPriority=""  SecondPriority=""    />
+        <div class="members_con" style="margin:0 auto">
+            
+            <section class="members_imgad">
+                <ul class="clearfix">
+                    
+                    
+                    <li style="margin-bottom:0px">
+                        <a href="/ProductDetails.aspx?productId=2109" title="【测试数据请勿真实购买】高端定制 意大利进口 水溶蕾丝气质连衣裙">
+                            
+                            
+                            <img src="/Storage/master/product/thumbs310/310_91091168cbf44e44ae412234e24fa3d8.jpg" width="100%" />
+                            
+                            
+                        </a>
+                    </li>
+                    
+                    <li style="margin-bottom:0px">
+                        <a href="/ProductDetails.aspx?productId=2108" title="【测试数据请勿真实购买】高端定制 美式性感 露背蕾丝拼接连衣裙">
+                            
+                            
+                            <img src="/Storage/master/product/thumbs310/310_8f85ae0bbbbf4cacbdb052392367048f.jpg" width="100%" />
+                            
+                            
+                        </a>
+                    </li>
+                    
+                    <li style="margin-bottom:0px">
+                        <a href="/ProductDetails.aspx?productId=2107" title="【测试数据请勿真实购买】高端定制 昂贵无比的金线蕾丝名媛连衣裙">
+                            
+                            
+                            <img src="/Storage/master/product/thumbs310/310_77a4497718f644ae8cf98ee65c06bc7a.jpg" width="100%" />
+                            
+                            
+                        </a>
+                    </li>
+                    
+                    <li style="margin-bottom:0px">
+                        <a href="/ProductDetails.aspx?productId=2104" title="【测试数据请勿真实购买】年度推荐春夏最仙的 真丝乌干纱白衬衫">
+                            
+                            
+                            <img src="/Storage/master/product/thumbs310/310_db8b5375d6654a8f8daf7b9c4afb0c66.jpg" width="100%" />
+                            
+                            
+                        </a>
+                    </li>
+                    
+                    <li style="margin-bottom:0px">
+                        <a href="/ProductDetails.aspx?productId=2106" title="【测试数据请勿真实购买】窈窕淑女 经典NNNN年的白蕾丝伞型连衣裙">
+                            
+                            
+                            <img src="/Storage/master/product/thumbs310/310_e997df9aa99a4bfdb2c77b0a6977fcfc.jpg" width="100%" />
+                            
+                            
+                        </a>
+                    </li>
+                    
+                    <li style="margin-bottom:0px">
+                        <a href="/ProductDetails.aspx?productId=2105" title="【测试数据请勿真实购买】限量必入款！绉纱羊毛 雪花水晶蝴蝶结玫瑰红露背连衣裙">
+                            
+                            
+                            <img src="/Storage/master/product/thumbs310/310_16f8d45b0c064bdeb85d9164d36431fa.jpg" width="100%" />
+                            
+                            
+                        </a>
+                    </li>
+                    
+                    <li style="margin-bottom:0px">
+                        <a href="/ProductDetails.aspx?productId=2100" title="【测试数据请勿真实购买】全棉修身无袖针织连衣裙">
+                            
+                            
+                            <img src="/Storage/master/product/thumbs310/310_64e182df9560471fb63010afd2bea386.jpg" width="100%" />
+                            
+                            
+                        </a>
+                    </li>
+                    
+                    <li style="margin-bottom:0px">
+                        <a href="/ProductDetails.aspx?productId=2094" title="季中特惠 梦幻西服式大衣">
+                            
+                            
+                            <img src="/Storage/master/product/thumbs310/310_61147348642c4849be79bcf06497788b.jpg" width="100%" />
+                            
+                            
+                        </a>
+                    </li>
+                    
+                    <li style="margin-bottom:0px">
+                        <a href="/ProductDetails.aspx?productId=2100" title="【测试数据请勿真实购买】全棉修身无袖针织连衣裙">
+                            
+                            
+                            <img src="/Storage/master/product/thumbs310/310_64e182df9560471fb63010afd2bea386.jpg" width="100%" />
+                            
+                            
+                        </a>
+                    </li>
+                    
+                    <li style="margin-bottom:0px">
+                        <a href="/ProductDetails.aspx?productId=2102" title="【测试数据请勿真实购买】高端定制 绿花边 流光纱透明淑女衬衫">
+                            
+                            
+                            <img src="/Storage/master/product/thumbs310/310_e31b36267af249f4a55327c77fea581a.jpg" width="100%" />
+                            
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </section>
+            
+        </div>
+    

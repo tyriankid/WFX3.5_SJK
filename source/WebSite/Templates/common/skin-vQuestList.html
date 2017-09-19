@@ -1,0 +1,115 @@
+﻿<hi:common_header runat="server" />
+<meta name="format-detection" content="telephone=no" />
+<link href="../templates/common/css/myIntegralDetail.css" rel="stylesheet" type="text/css">
+<link href="/style/sign.css" rel="stylesheet" />
+<style>
+    body{background-color:#FFF;}
+    .orderlist {
+        margin-top: 15px;
+        background: #4290D1;
+        padding:10px;
+    }
+
+    .orderinfo {
+        padding: 0 10px;
+        border-bottom: 1px solid #CCC;
+    }
+
+   .orderinfo p {
+            height: 40px;
+            line-height: 40px;
+        }
+
+    .List {
+        border-bottom: 1px dashed #CCC;
+        height: 100px;
+        background: #FFF;
+        border-radius: 5px;
+    }
+
+    .List-left {
+        float: left;
+        width: 32%;
+        padding: 10px;
+    }
+
+    .List-left img {
+            width: 80px;
+            height: 80px;
+        }
+
+    .List-right {
+        float: right;
+        width: 68%;
+        margin-top: 20px;
+    }
+    .List-right .title{
+        font-weight:bold;
+    }
+    .List-right p {
+            line-height: 20px;
+        }
+    .List-right p span{
+        float:right;margin-right:10px;
+    }
+    .List2 {
+        height: 45px;
+        line-height: 45px;
+        padding: 0 10px;
+        background:#FFF;
+        border-radius:5px;
+    }
+    .List2 span{font-weight:bold;font-size:14px;float:left;}
+    .List2 .ding{float:right;}
+    .List2 .ding a{
+        padding: 5px 10px;
+        border: 1px solid #4290D1;
+        height: 25px;
+        line-height: 25px;
+        border-radius: 3px;
+        color:#4290D1;
+        }
+</style>
+<div class="container">
+
+    <div class="y-navtop">
+        <h1>订单日历</h1>
+        <a class="y-return" href="javascript:;" onclick="goBack()">返回</a>
+    </div>
+    <div class="orderlist" style="margin-top:0;">
+        
+        <div class="List">
+            <div class="List-left">
+                <asp:Image id="imgPrt" runat="server" />
+                <!--<img src="../../Utility/pics/1.JPG" />-->
+            </div>
+            <div class="List-right">
+                <p class="title"><asp:literal runat="server" id="litPrtName" /><span><asp:literal runat="server" id="litPrtPrice" /></span></p>
+                <p>收货人：<asp:literal runat="server" id="litUserName" /><span><asp:literal runat="server" id="litPrtQuantity" /></span></p>
+                <p>配送地址：<asp:literal runat="server" id="litAddress" /></p>
+            </div>
+        </div>
+        <div class="List2">
+            <span>客服</span>
+            <div class="ding"><a  href="tel:18717146096">立即联系</a></div>           
+        </div>
+    </div>
+</div>
+<div id="pager"></div>
+<hi:Common_Daily id="daily" runat="server" />
+
+    <script type="text/javascript">
+        //返回
+        function goBack() {
+            var backUrl = document.referrer;
+            if (backUrl == "") {
+                backUrl = "/ProductList.aspx"
+            }
+            location.href = backUrl;
+        }
+
+    </script>
+
+
+
+    <hi:common_footer runat="server" />

@@ -1,0 +1,178 @@
+﻿<hi:common_header runat="server" /><input type="hidden" id="hdIsShow" runat="server" value="0" />
+<link rel="stylesheet" href="../style/scart.css" />
+<style>
+    body{background:#ffffff;}
+    .address .title {
+        height: 30px;
+        line-height: 30px;
+        background: #EC4B00;
+        color: #FFF;
+        padding: 0 10px;
+    }
+    .Address-Box {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    .address {
+        border: 1px solid #EC4B00;
+    }
+    .address .dizhi {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+    }
+    .address .dizhi input[type=radio]{
+        margin-right:10px;
+        width:15px;
+        height:15px;
+        position:relative;
+        top:3px;
+    }
+    .beizhu{
+
+    }
+    .beizhu p{
+        height: 30px;
+        line-height: 30px;
+    }
+    .beizhu textarea{
+        width:100%;
+        height:auto;
+        resize:none;
+        line-height:20px;
+    }
+
+
+</style>
+<div class="shoppingStepBar clearfix">
+    <div class="step active text-left"><em style="margin-left: -8px;">购物车</em><div class="glyphicon glyphicon-ok"></div><i></i></div>
+    <div class="step text-center"><em>确认订单</em><div class="glyphicon glyphicon-ok"></div></div>
+    <div class="step text-right"><em style="margin-right: -14px;">下单成功</em><div class="glyphicon glyphicon-ok"></div><i></i></div>
+</div>
+<hr />
+ <!--配送地址-->
+<!--<div class="Address-Box">
+    <div class="address">
+        <p class="title">配送地址</p>
+        <p class="dizhi"><input type="radio" name="name" value="" />漯河市三剑客工业园</p>
+    </div>
+</div>-->
+
+<asp:Panel ID="divEmpty" runat="server" Visible="false" CssClass="shopnull">
+    <div class="bgimg"></div>
+    <p class="emptytexttitle">暂未选购商品</p>
+    <a href="/Default.aspx">去逛逛</a>
+</asp:Panel>
+
+    <asp:Panel ID="products" runat="server" style="display: inline-block; width: 100%;">
+        <hi:vshoptemplatedrepeater id="rptCartProducts" templatefile="/Tags/skin-Common_CartProducts.ascx" runat="server" />
+    </asp:Panel>
+
+    <asp:Panel ID="pointproducts" runat="server" style="display: inline-block; width: 100%;">
+        <hr />
+        <h3>积分兑换商品</h3>
+        <hr />
+        <hi:vshoptemplatedrepeater id="rptCartPointProducts" templatefile="/Tags/skin-Common_CartPointProducts.ascx" runat="server" />
+    </asp:Panel>
+<asp:Panel ID="pannelGo" runat="server" style="display: inline-block; width: 100%;">
+     <!--<div class="pbox" style="display: inline-block;">
+       <ul class="pbox-bottom-left">
+            <li>购物车合计（不含运费）：<span id="totalPrice"><asp:literal runat="server" id="litTotal" /></span></li>
+        </ul>
+
+    </div>-->
+    <div style="margin-bottom :35px;">
+        <p style="color:red;background:#F9F9F9;height:40px;line-height:40px;padding:0 10px;">实付金额：<span style="font-size:14px;">120￥</span></p>
+        <p style="height:40px;line-height:40px;padding:0 10px;">送货备注：</p>
+        <textarea style="width:95%;height:auto;resize:none;line-height:20px;margin:0 10px;"></textarea>
+    </div>
+    
+    <div class="pbox"style="position:fixed;bottom:35px;width:100%;padding:10px 0;">
+        <a href="/Default.aspx" id="aLink1" style="color: #fff; margin-top: 5px; float: left;width:50%;border-radius:0;background-color:#EE6737;height:40px;line-height:40px;padding:0;" class="btn btn-danger btn-block">
+            继续订购
+        </a>
+        <a runat="server" id="aLink" style="color: #fff; background:#EC3B05; margin-top: 5px; float: right;width:50%;border-radius:0;height:40px;line-height:40px;padding:0;" class="btn btn-danger btn-block">
+            立即付款
+        </a>
+        
+    </div>
+</asp:Panel>
+    <script type="text/javascript">
+        $(function () {
+            $("#delete").click(function () {
+                $(".content").hide();
+                $(".zong").css({ "marginTop": "0" });
+            });
+        });
+
+
+
+        $(function () {
+            if ($.trim($('#totalPrice').text()) == "￥0.00") {
+
+                $('#cart').addClass('hide');
+                $('#empty').removeClass('hide');
+            }
+
+            $('div[name="spAdd"]').bind("click", function () {
+                var number = $(this).parent().find('[name="buyNum"]');
+                number.val(parseInt(number.val()) + 1);
+                chageCartProductQuantity(number);
+            });
+            $('div[name="spSub"]').bind("click", function () {
+                var number = $(this).parent().find('[name="buyNum"]');
+                var num = parseInt(number.val()) - 1;
+                if (num > 0) number.val(parseInt(number.val()) - 1);
+                chageCartProductQuantity(number);
+
+            });
+            $('[name="buyNum"]').unbind('blur').blur(function () {
+                chageCartProductQuantity(this);
+            });
+
+            var skuInputs = $('.specification input');
+            $.each(skuInputs, function (j, input) {
+                var text = '';
+                $.each($(input).val().split(';'), function (i, sku) {
+                    if ($.trim(sku))
+                        text += '<span class="property">' + sku.split('：')[1] + '</span>';
+                });
+                $(input).parent().html(text);
+
+            });
+
+            var list_h = (document.documentElement.clientHeight - 49 - $('.list-empty').height()) * .5 + 'px';
+            $('.list-empty').css('margin-top', list_h);
+        });
+
+
+        function chageCartProductQuantity(obj) {
+            var type = $(obj).attr("stype");
+            if (type == null || type == undefined) {
+                type = 0;
+            }
+            var exchangeId = $(obj).attr("exchangeId");
+            if (exchangeId == null || exchangeId == undefined) {
+                exchangeId = 0;
+            }
+
+            $.ajax({
+                url: "/API/VshopProcess.ashx",
+                type: 'post', dataType: 'json', timeout: 10000,
+                data: { action: "ChageQuantity", skuId: $(obj).attr("skuId"),limitedTimeDiscountId:$(obj).attr("limitedTimeDiscountId"), quantity: parseInt($(obj).val()), type: type, exchangeId: exchangeId },
+                success: function (resultData) {
+                    if (resultData.Status != "OK" && resultData.Status!="0") {
+                        alert("最多可购买" + resultData.Status + "件");
+                        $(obj).val(resultData.Status);
+                    }
+                    else {
+                        //$('#totalPrice').html('¥' + parseFloat(resultData.TotalPrice).toFixed(2));
+                        location.reload();
+                    }
+                }
+            });
+        }
+    </script>
+    <script src="/utility/vshoping.helper.js?20160802" type="text/javascript"></script>
+    <hi:common_footer runat="server" />

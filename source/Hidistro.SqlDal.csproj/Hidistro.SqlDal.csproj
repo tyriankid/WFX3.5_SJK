@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{39CCBD26-2FA9-4AD7-9FBD-6CA8360A4B2D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Hidistro.SqlDal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\dll\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\dll\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hidistro.SqlDal.Bargain\BargainDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Comments\ProductConsultationDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Comments\ProductReviewDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Commodities\AttributeDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Commodities\AttributeValueDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Commodities\BrandCategoryDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Commodities\CategoryDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Commodities\HomeProductDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Commodities\ProductBatchDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Commodities\ProductBrowseDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Commodities\ProductDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Commodities\ProductTypeDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Commodities\SkuDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Commodities\TagDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Commodities\TaobaoProductDao.cs" />
+    <Compile Include="Hidistro.SqlDal.FengXiao\DistributorGradeCommissionDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Members\AmountDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Members\CustomGroupingDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Members\CustomGroupingUserDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Members\DistributorGradeCommissionDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Members\DistributorGradeDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Members\DistributorsDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Members\FavoriteDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Members\IntegralDetailDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Members\MemberDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Members\MemberGradeDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Members\PointDetailDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Orders\DebitNoteDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Orders\LineItemDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Orders\OrderDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Orders\OrderSplitDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Orders\SendNoteDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Promotions\ActivityDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Promotions\CouponDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Promotions\GameActDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Promotions\GameDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Promotions\GamePrizeDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Promotions\LimitedTimeDiscountDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Promotions\PointExChangeDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Promotions\PrizeResultDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Promotions\ShareActDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Promotions\VoteDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Sales\DateStatisticDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Sales\ExpressTemplateDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Sales\PaymentModeDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Sales\SaleStatisticDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Sales\ShipperDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Sales\ShippingAddressDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Sales\ShoppingCartDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Settings\CustomerServiceDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Settings\MenuDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Settings\OutPayDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Settings\ShippingModeDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Store\CustomPageDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Store\EmailQueueDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Store\LogDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Store\MessageDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Store\MessageTemplateDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Store\NoticeDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Store\NoticeUserDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Store\PhotoGalleryDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Store\RedPackDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Store\RoleDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Store\RolePermissionDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\ActivitiesDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\ActivityDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\ActivitySignUpDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\AlarmDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\AliFuwuReplyDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\BannerDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\FeedBackDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\MenuDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\MessageTemplateHelperDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\OneyuanTaoDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\OrderRedPagerDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\ReplyDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\ScanScenceDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\SendRedpackRecordDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\ShareMaterialDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\ShopStatisticDao.cs" />
+    <Compile Include="Hidistro.SqlDal.VShop\UserSignDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Weibo\ArticleDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Weibo\MenuDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Weibo\MessageDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Weibo\ReplyDao.cs" />
+    <Compile Include="Hidistro.SqlDal.Weibo\SendAllDao.cs" />
+    <Compile Include="Hidistro.SqlDal\BackupRestoreDao.cs" />
+    <Compile Include="Hidistro.SqlDal\ExpressDataDao.cs" />
+    <Compile Include="Hidistro.SqlDal\RefundDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hidistro.Core.csproj\Hidistro.Core.csproj">
+      <Project>{eb0a32a6-fadd-4b43-9bc3-28ec243edddd}</Project>
+      <Name>Hidistro.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.Entities.csproj\Hidistro.Entities.csproj">
+      <Project>{b364dc27-47fa-4001-af48-dece180b1d74}</Project>
+      <Name>Hidistro.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hishop.Open.Api.csproj\Hishop.Open.Api.csproj">
+      <Project>{1172c8e8-1109-4711-963e-fcb796bde857}</Project>
+      <Name>Hishop.Open.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hishop.Weixin.Pay.csproj\Hishop.Weixin.Pay.csproj">
+      <Project>{552860ee-2952-450f-aa35-4a5407b568bd}</Project>
+      <Name>Hishop.Weixin.Pay</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
